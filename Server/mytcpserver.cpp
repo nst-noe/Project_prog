@@ -3,12 +3,13 @@
 #include <QCoreApplication>
 #include <QString>
 #include "database.h"
-/*! \brief Методы класса mytcpserver
-    Реализуется возможность подключения к серверу, отсоединения, подключения нескольких клиентов, считывание приходящих сообщений
-    Авторизация, регистрация и подключение к бд
+/*! \brief Методы класса MyTcpServer
+
+    Данными методами реализуется возможность подключения к серверу одного или нескольких клиентов,
+    отсоединения, считывание приходящих сообщений, авторизация, регистрация и подключение к бд
     */
 
-std::string auth(std::string log,std::string pass) //авторизация, подключение к бд
+std::string auth(std::string log,std::string pass) ///Метод осуществляет авторизацию, подключение к бд
 {
     DataBase db;
     db.open();
@@ -23,7 +24,7 @@ std::string auth(std::string log,std::string pass) //авторизация, п�
         }
     return result;
 }
-std::string reg(std::string log,std::string pass)
+std::string reg(std::string log,std::string pass) ///Метод, осуществляющий регистрацию
 {
     DataBase db;
     db.open();
@@ -40,7 +41,7 @@ std::string reg(std::string log,std::string pass)
         }
     return result;
 }
-std::string send_stat(std::string log){ //отправить статус
+std::string send_stat(std::string log){ ///Метод отправляет статус
         DataBase db;
         db.open();
         std::string result = db.querry("SELECT pobed, porog FROM bd_kr_nl WHERE login = '" + log + "';");
@@ -95,9 +96,9 @@ std::string parsing(std::string mess)
         return send_stat(log);
     }
 
-//    else {
-//        return "statistic";
-//    }
+    else {
+        return "statistic";
+    }
 }
 
 MyTcpServer::~MyTcpServer()

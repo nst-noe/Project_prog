@@ -3,7 +3,7 @@
 #include <QSqlDatabase>
 #include <QSqlRecord>
 /*!
-     Класс database реализует подключение к базе данных и отправление ей запросов
+     Класс DataBase реализует подключение к базе данных и отправление ей запросов
 
  */
 class DataBase

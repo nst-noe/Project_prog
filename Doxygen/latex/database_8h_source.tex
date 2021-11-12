@@ -1,0 +1,20 @@
+\hypertarget{database_8h_source}{}\doxysection{database.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef DATABASE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define DATABASE\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QSqlDatabase>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QSqlRecord>}}
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_data_base}{DataBase}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_data_base_a9fbd4936704ce4de391f92e92a072074}{DataBase}}();}
+\DoxyCodeLine{13     \textcolor{keywordtype}{bool} open();}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_data_base}{\string~DataBase}}()\{db.close();\}}
+\DoxyCodeLine{15     QSqlDatabase db;}
+\DoxyCodeLine{16     std::string querry(std::string str\_querry);}
+\DoxyCodeLine{17 \};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// DATABASE\_H}}
+
+\end{DoxyCode}
